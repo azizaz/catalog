@@ -1,0 +1,139 @@
+.container {
+  width: 710px;
+}
+
+body {
+  background: url('/images/bgtile.png') #577D5D;
+}
+
+/* Round corners */
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+header {
+  margin-top: 1em;
+  padding: 20px;
+  background: #fff;
+  overflow: hidden;
+}
+
+header h1 {
+  float: left;
+  font-size: 2em;
+}
+
+header div {
+  float: right;
+}
+
+/* Navigation */
+
+nav {
+  float: left;
+}
+
+nav {
+  background-color: white;
+  padding: 0;
+  white-space: nowrap;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px 0 0;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+  overflow: hidden;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+/* Links */
+
+a {
+  color: #09c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #069;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer nav {
+  float: none;
+}
+
+#lcol {
+	float: left;
+	width: 170px;
+	margin: 0;
+	padding: 0 10px 0 0;
+}
+
+#rcol {
+	float: left;
+	width: 480px;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+.link_add {
+	float: right;
+	margin: -10px -10px 0 0;
+	font-size: 0.7em;
+}
+
+.rubric_tree {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.8em;
+}
+
+.rubric_tree li {
+  margin: 0 0 0.5em;
+}

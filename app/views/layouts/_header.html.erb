@@ -1,0 +1,21 @@
+<header class="round">
+  <% logo = "Предприятия Кировограда" %>
+  <h1><%= link_to logo, root_path %></h1>
+  <div>
+    <%= render 'layouts/search_form' %>
+  </div>
+  <nav>
+    <ul>
+      <li><%= link_to "Полистать", browse_path %></li>
+      <li><%= link_to "О проекте", about_path %></li>
+      <li><%= link_to "Контакты", contact_path %></li>
+      <li>
+		<% if current_user %>
+			<strong><%= current_user.name %></strong> (<%= link_to "выйти", signout_path %>)
+		<% else %>
+			<%= link_to "Войти", "/auth" %>
+		<% end %>
+	  </li>
+    </ul>
+  </nav>
+</header>

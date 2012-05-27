@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Catalog</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <title><%= title %></title>
   <%= csrf_meta_tag %>
+  <%= render 'layouts/stylesheets' %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <%= render 'layouts/header' %>
+  <section class="round">
+    <% if notice.present? %><p id="notice" class="info"><%= notice %></p><% end %>
+    <%= yield %>
+  </section>
+  <%= render 'layouts/footer' %>
+</div>
+
+<%= debug(params) if Rails.env.development? %>
 
 </body>
 </html>

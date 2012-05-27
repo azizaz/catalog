@@ -1,0 +1,41 @@
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "ошибка") %> при создании записи:</h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Название' %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label 'Раздел' %><br />
+    <%= select_tag('item[rubric_id]', options_for_select(Rubric.all.collect {|rubric| [rubric.name, rubric.id]})) %>
+  </div>
+  <div class="field">
+    <%= f.label 'Описание' %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label 'Адрес' %><br />
+    <%= f.text_area :address %>
+  </div>
+  <div class="actions">
+    <%= submit_tag('Добавить') %>
+  </div>
+<% end %>

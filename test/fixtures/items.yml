@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  rubric_id: 1
+  description: MyText
+  email: MyString
+  url: MyString
+  address: MyText
+  geo_lat: 1.5
+  geo_lng: 1.5
+
+two:
+  name: MyString
+  rubric_id: 1
+  description: MyText
+  email: MyString
+  url: MyString
+  address: MyText
+  geo_lat: 1.5
+  geo_lng: 1.5

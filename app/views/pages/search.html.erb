@@ -1,0 +1,18 @@
+  <% if @items.present? %>
+    <h1>Результаты поиска</h1>
+    <%= will_paginate @items %>
+    <ul>
+    <% @items.each do |item| %>
+      <li>
+        <%= link_to item.name, item %></h3>
+      </li>
+    <% end %>
+    </ul>
+    <%= will_paginate @items %>
+  <% else %>
+    <h1>Не нашлось</h1>
+    <% if @is_shortquery %>
+    <p>И не найдется, потому что надо больше букв!</p>
+    <% end %>
+    <p>Поищите что-нибудь другое или сами <%= link_to "добавьте", new_item_path %> то, что нужно.</p>
+  <% end %>

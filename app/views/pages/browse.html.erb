@@ -1,0 +1,23 @@
+<div id="lcol">
+  <%= render 'rubric_tree' %>
+</div>
+<div id="rcol">
+  <%= link_to "Добавить", new_item_path, :class => 'link_add' %>
+  <h2>
+  <% if @rubric.present? %>
+    <%= @rubric.name %>
+  <% else %>
+    Последние поступления
+  <% end %>
+  </h2>
+
+  <% if @items.present? %>
+  <ul>
+  <% @items.each do |item| %>
+    <li>
+      <%= link_to item.name, item %></h3>
+    </li>
+  <% end %>
+  </ul>
+  <% end %>
+</div>

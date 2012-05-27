@@ -1,0 +1,16 @@
+<h1>Добро пожаловать</h1>
+<p>Абзац како-то рыбы</p>
+<p>
+ТУДУ<br />
+<u>Проверять количество символов при поиске</u>
+</p>
+<h3>Последние поступления</h3>
+<% if @items.present? %>
+  <ul>
+  <% @items.each do |item| %>
+    <li>
+      <%= link_to item.name, item %> в <%= link_to item.rubric.name, "#{browse_path}/#{item.rubric_id}" %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>

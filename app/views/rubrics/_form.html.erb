@@ -1,0 +1,25 @@
+<%= form_for(@rubric) do |f| %>
+  <% if @rubric.errors.any? %>
+    <div id="error_explanation">
+      <h3><%= pluralize(@rubric.errors.count, "ошибка") %> при создании раздела:</h3>
+
+      <ul>
+      <% @rubric.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Название' %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label 'Описание' %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= submit_tag('Добавить') %>
+  </div>
+<% end %>

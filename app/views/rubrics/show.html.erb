@@ -1,0 +1,24 @@
+
+
+<p>
+  <b>Name:</b>
+  <%= @rubric.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @rubric.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_rubric_path(@rubric) %> |
+<%= link_to 'Back', rubrics_path %>
+
+<ul>
+<% @rubric.items.each do |item| %>
+  <li>
+    <h3><%= item.name %></h3>
+    <p><%= item.description %></p>
+  </li>
+<% end %>
+</ul>

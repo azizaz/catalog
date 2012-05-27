@@ -1,0 +1,8 @@
+<%= link_to "Добавить", new_rubric_path, :class => 'link_add' %>
+<ul class="rubric_tree">
+  <% rubrics.each do |rubric| %>
+    <li>
+      <%= link_to rubric.name, "#{browse_path}/#{rubric.id}" %></h3>
+    </li>
+  <% end %>
+</ul>

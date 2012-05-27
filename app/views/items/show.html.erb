@@ -1,0 +1,23 @@
+<h1><%= @item.name %></h1>
+
+<p>
+  <%= link_to @item.rubric.name, "#{browse_path}/#{@item.rubric.id}" %>
+</p>
+
+<p>
+  <%= @item.description %>
+</p>
+
+<p>
+  <% if @item.email.present? %><%= @item.email %><% end %>
+  <% if @item.email.present? and @item.url.present? %>|<% end %>
+  <% if @item.url.present? %><%= @item.url %><% end %>
+</p>
+
+<p>
+  <%= @item.address %><br/>
+  <% if @item.latitude.present? and @item.longitude.present? %>
+    <%= link_to( image_tag( "http://maps.google.com/maps/api/staticmap?size=600x400&sensor=false&zoom=16&markers=#{@item.latitude}%2C#{@item.longitude}"), 
+       "http://maps.google.com/maps?q=#{@item.latitude}%2C#{@item.longitude}") %>
+  <% end %>
+</p>

@@ -6,6 +6,10 @@ gem 'rails', '3.0.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'will_paginate'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'geocoder'
 
 # Use unicorn as the web server
 # gem 'unicorn'
